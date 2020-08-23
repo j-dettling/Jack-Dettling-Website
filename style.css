@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap");
+body {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: gray;
+}
+
+.video-container iframe {
+  margin-left: 50px;
+  width: 400px;
+  height: 400px;
+}
+.margin {
+  margin-top: 0;
+  margin-left: 50px;
+}
+
+@media screen and (max-width: 992px) {
+  .video-container iframe {
+    margin-left: 50px;
+    width: 400px;
+    height: 400px;
+  }
+  .margin {
+    margin-top: 0px;
+    margin-left: 50px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .video-container iframe {
+    margin-left: 50px;
+    width: 250px;
+    height: 250px;
+  }
+  .margin {
+    margin-top: 0px;
+    margin-left: 50px;
+  }
+}
+
+.navigator {
+  margin-bottom: 50px;
+}
