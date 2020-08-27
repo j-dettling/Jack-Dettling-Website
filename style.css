@@ -2,7 +2,6 @@
 body {
   font-family: "Source Sans Pro", sans-serif;
 }
-
 a {
   text-decoration: none;
   color: black;
@@ -11,44 +10,6 @@ a {
 a:hover {
   color: gray;
 }
-
-.video-container iframe {
-  margin-left: 50px;
-  width: 400px;
-  height: 400px;
-}
-.margin {
-  margin-top: 0;
-  margin-left: 50px;
-}
-
-@media screen and (max-width: 992px) {
-  .video-container iframe {
-    margin-left: 50px;
-    width: 400px;
-    height: 400px;
-  }
-  .margin {
-    margin-top: 0px;
-    margin-left: 50px;
-  }
-}
-
-@media screen and (max-width: 600px) {
-  .video-container iframe {
-    margin-left: 50px;
-    width: 250px;
-    height: 250px;
-  }
-  .margin {
-    margin-top: 0px;
-    margin-left: 50px;
-  }
-  .text {
-    margin-left: 0px;
-  }
-}
-
 .navigator {
   margin-bottom: 50px;
 }
@@ -56,18 +17,129 @@ a:hover {
 .text {
   margin-right: 40%;
 }
-h {
+h2 {
   font-size: 20px;
 }
 
 .header {
-  margin-left: 50px;
-  margin-top: 30px;
+  margin-left: 0px;
+  margin-top: 90px;
   margin-bottom: 10px;
 }
+.video-container iframe {
+  margin-left: 0px;
+  width: 400px;
+  height: 300px;
+}
 
-p {
-  margin: 2px, 0px, 2px, 0;
-  padding: 2px, 0px, 2px, 0;
+img {
+  width: 400px;
+  height: 300px;
+}
+.margin {
+  margin-top: 0;
+  margin-left: 50px;
+}
+
+
+
+
+
+
+/* video sizing */
+/* full size */
+@media screen and (max-width: 992px) {
+  .video-container iframe {
+    margin-left: 0px;
+    width: 400px;
+    height: 300px;
+  }
+  .margin {
+    margin-top: 0px;
+    margin-left: 50px;
+  }
+  img {
+    width: 400px;
+    height: 300px;
+  }
+}
+/* cell phone size */
+@media screen and (max-width: 600px) {
+  .video-container iframe {
+    margin-left: 0px;
+    width: 200px;
+    height: 150px;
+  }
+  .margin {
+    margin-top: 0px;
+    margin-left: 50px;
+  }
+  .text {
+    margin-right: 0px;
+  }
+  img {
+    width: 200px;
+    height: 150px;
+  }
+}
+
+/* lightbox code */
+/*.img-list {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+*/
+.img-list img {
+  width: 300px;
+  height: 225px;
+  object-fit: cover;
   
+
+}
+
+.lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  opacity: 0;
+  pointer-events: none;
+
+  transition: all 0.3s ease-out;
+}
+
+.show {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: black;
+  opacity: 0.8;
+  z-index: -1;
+}
+
+.lightbox-img {
+  width: 95%;
+  height: 95%;
+  object-fit: contain;
+
+  transform: translateY(20px);
+
+  transition: all 0.3s ease-out;
+}
+
+.lightbox.show .lightbox-img {
+  transform: translateY(0);
 }
