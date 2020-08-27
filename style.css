@@ -56,3 +56,18 @@ a:hover {
 .text {
   margin-right: 40%;
 }
+h {
+  font-size: 20px;
+}
+
+.header {
+  margin-left: 50px;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin: 2px, 0px, 2px, 0;
+  padding: 2px, 0px, 2px, 0;
+  
+}
