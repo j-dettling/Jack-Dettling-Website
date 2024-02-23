@@ -32,6 +32,14 @@ h2 {
   height: 300px;
 }
 
+.sc-logo img {
+  margin-top: 2em;
+  width: 1.5em;
+  height: auto;
+}
+
+
+
 img {
   width: 400px;
   height: 300px;
